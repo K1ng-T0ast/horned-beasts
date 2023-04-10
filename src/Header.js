@@ -2,7 +2,7 @@ import React from 'react';
 
 class Header extends React.Component {
     render() {
-        return <p>Created by {this.props.creator}</p>;
+        return <h1>Created by {this.props.pageTitle}</h1>;
     }
 }
 
