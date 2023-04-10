@@ -1,14 +1,15 @@
-// import logo from './logo.svg';
+
 import './App.css';
 import Header from './Header';
 import Main from './Main';
+import Footer from './Footer';
 
 function App() {
   return (
     <div>
-      <Header creator={'K!ng T0ast'} />
+      <Header pageTitle={'Horned Beasts!'} />
       <Main />
-      <Footer />
+      <Footer creator={'Kyle White (alias K!ng T0ast)'} />
     </div>
   );
 }
