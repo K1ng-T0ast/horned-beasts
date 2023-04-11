@@ -1,16 +1,19 @@
 
-import './App.css';
-import Header from './Header';
-import Main from './Main';
-import Footer from './Footer';
+// import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from 'react-bootstrap/Container';
+import Header from './Components/Header';
+import Main from './Components/Main';
+import Footer from './Components/Footer';
+import ImageUrls from './data.json';
 
 function App() {
   return (
-    <div>
-      <Header pageTitle={'Horned Beasts!'} />
-      <Main />
-      <Footer creator={'Kyle White (alias K!ng T0ast)'} />
-    </div>
+    <Container>
+      <Header title={'Horned Beasts 2: Judgement Day'} />
+      <Main heading='What is your opinion?' ImageUrls={ImageUrls} />
+      <Footer farewell='Your opinion counts!' />
+    </Container>
   );
 }
 
