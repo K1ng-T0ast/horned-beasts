@@ -10,9 +10,9 @@ import ImageUrls from './data.json';
 function App() {
   return (
     <Container>
-      <Header title={'Horned Beasts 2: Judgement Day'} />
-      <Main heading='What is your opinion?' ImageUrls={ImageUrls} />
-      <Footer farewell='Your opinion counts!' />
+      <Header title={<><span>Horned Beasts 2: </span><span style={{ fontStyle: 'italic', fontWeight: 'bolder' }}>Judgement Day</span></>} />
+      <Main heading='click on your favorite horned beasts' ImageUrls={ImageUrls} />
+      <Footer farewell='Which one was your favorite?' />
     </Container>
   );
 }

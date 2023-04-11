@@ -14,25 +14,25 @@ Actual time needed to complete: 30min
 
 Number and name of feature: Feature #2, Allow Users to Favorite Individual Beasts
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 30min
 
-Start time: _____
+Start time: 2:55pm
 
-Finish time: _____
+Finish time: 3:30pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 35min
 
 ################################################################
 
 Number and name of feature: Feature #3, Bootstrap
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 30min
 
-Start time: _____
+Start time: 3:40pm
 
-Finish time: _____
+Finish time: 4:20pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 40min
 
 ################################################################
 

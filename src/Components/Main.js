@@ -2,16 +2,23 @@ import React from "react";
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Image from 'react-bootstrap/Image'
+import { Image } from 'react-bootstrap';
+import { FaHeart } from 'react-icons/fa';
 
 
 class Main extends React.Component {
     render() {
         const beastImgs = this.props.ImageUrls;
 
+        // const backgroundStyle = {
+        //     backgroundColor: '#f8f9fa',
+        //     minHeight: '100vh',
+        //     paddingTop: '20px,'
+        // };
+
         return (
             <div>
-                <h2>{this.props.heading}</h2>
+                <h2 style={{ textAlign: 'center', fontSize: '30px', marginBottom:'1.9em'}}>{this.props.heading}</h2>
                 <Container>
                     <Row>
                         <Col>
@@ -41,29 +48,33 @@ class Main extends React.Component {
     }
 }
 
-class BeastData extends React.Component {
+
+export class BeastData extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            "status": "Nay",
+            favorites: 0,
+            // "status": "Nay",
         }
     }
 
     handleClick = () => {
 
-        const newStatus = this.state.status === "Nay" ? "Yay" : "Nay";
+        // const newStatus = this.state.status === "Nay" ? "Yay" : "Nay";
 
-        this.setState({
-            status: newStatus
-        });
+        this.setState((oldState) => ({
+            favorites: oldState.favorites + 1,
+        }));
     }
 
     render() {
         return (
             <div onClick={this.handleClick}>
                 <Image src={this.props.image_url} alt='a random horned beast' rounded fluid />
-                <h3>{this.state.status}</h3>
+                <div>
+                    <FaHeart /> {this.state.favorites} Favorites
+                </div>
             </div>
         );
     }

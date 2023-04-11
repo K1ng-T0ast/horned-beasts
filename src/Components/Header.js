@@ -4,7 +4,7 @@ class Header extends React.Component {
     render() {
         return (
             <header>
-                <h1>{this.props.title}</h1>;
+                <h1 style={{ textAlign: 'center', fontSize: '50px', marginTop: '1.2em', marginBottom: '1.3em' }}>{this.props.title}</h1>
             </header>
         );
     }
