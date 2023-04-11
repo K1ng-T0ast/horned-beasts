@@ -1,3 +1,41 @@
+## Lab 02
+
+Number and name of feature: Feature #1, Display Images
+
+Estimate of time needed to complete: 20min
+
+Start time: 2:20pm
+
+Finish time: 2:50pm
+
+Actual time needed to complete: 30min
+
+################################################################
+
+Number and name of feature: Feature #2, Allow Users to Favorite Individual Beasts
+
+Estimate of time needed to complete: 30min
+
+Start time: 2:55pm
+
+Finish time: 3:30pm
+
+Actual time needed to complete: 35min
+
+################################################################
+
+Number and name of feature: Feature #3, Bootstrap
+
+Estimate of time needed to complete: 30min
+
+Start time: 3:40pm
+
+Finish time: 4:20pm
+
+Actual time needed to complete: 40min
+
+################################################################
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
