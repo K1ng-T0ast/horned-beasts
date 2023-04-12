@@ -1,24 +1,62 @@
 import React from "react";
+import '../App.css'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import { Image } from 'react-bootstrap';
-import { FaHeart } from 'react-icons/fa';
-
+import BeastData from "./SelectedBeast";
 
 class Main extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            searchQuery: '',
+        };
+    }
+
+    handleSearch = (event) => {
+        this.setState({ searchQuery: event.target.value });
+    };
+
+    fuzzySearch = (str, query) => {
+        const precise = query
+            .split(',')
+            .map((char) => `(?=.*${char})`)
+            .join(',');
+        const regularExpression = new RegExp(precise, 'g');
+        return str.match(regularExpression);
+    };
+
     render() {
         const ImageUrls = this.props.ImageUrls;
+        const searchQuery = this.state.searchQuery;
+
+        const filterImages = ImageUrls.filter((url) => {
+            return (
+                this.fuzzySearch(url.title, searchQuery) ||
+                this.fuzzySearch(url.keyword, searchQuery)
+            );
+        });
 
         return (
             <div>
                 <h2 style={{ textAlign: 'center', fontSize: '30px', marginBottom: '1.9em' }}>{this.props.heading}</h2>
+                <div className="inputContainer">
+                    <input className="inputBox"
+                        type='text'
+                        placeholder="Search beast by title or keyword"
+                        value={this.state.searchQuery}
+                        onChange={this.handleSearch}
+                    />
+                </div>
                 <Container>
                     <Row>
-                        {ImageUrls.map((url, index) => (
+                        {filterImages.map((url, index) => (
                             <Col key={index} xs={12} md={6} lg={4}>
                                 <BeastData
                                     image_url={url.image_url}
+                                    description={url.description}
+                                    title={url.title}
+                                    keyword={url.keyword}
                                 />
                             </Col>
                         ))}
@@ -29,62 +67,4 @@ class Main extends React.Component {
     }
 }
 
-
-export class BeastData extends React.Component {
-    
-    constructor(props) {
-        super(props);
-        this.state = {
-            favorites: 0,
-            // "status": "Nay",
-        }
-    }
-    
-    handleClick = () => {
-        
-        // const newStatus = this.state.status === "Nay" ? "Yay" : "Nay";
-        
-        this.setState((oldState) => ({
-            favorites: oldState.favorites + 1,
-        }));
-    }
-    
-    render() {
-        return (
-            <div onClick={this.handleClick}>
-                <Image src={this.props.image_url} alt='a random horned beast' rounded fluid />
-                <div>
-                    <FaHeart /> {this.state.favorites} Favorites
-                </div>
-            </div>
-        );
-    }
-}
-
-
 export default Main;
-
-// <Row>
-//     <Col>
-//         <BeastData image_url={beastImgs[0].image_url} />
-//     </Col>
-//     <Col>
-//         <BeastData image_url={beastImgs[1].image_url} />
-//     </Col>
-//     <Col>
-//         <BeastData image_url={beastImgs[2].image_url} />
-//     </Col>
-// </Row>
-// <Row>
-//     <Col>
-//         <BeastData image_url={beastImgs[3].image_url} />
-//     </Col>
-//     <Col>
-//         <BeastData image_url={beastImgs[4].image_url} />
-//     </Col>
-//     <Col>
-//         <BeastData image_url={beastImgs[5].image_url} />
-//     </Col>
-// </Row>
-
-

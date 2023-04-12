@@ -1,3 +1,17 @@
+# Lab 03
+
+Number and name of feature: Feature #1, Display a Modal
+
+Estimate of time needed to complete: 30min
+
+Start time: 2:40pm
+
+Finish time:
+
+Actual time needed to complete:
+
+################################################################
+
 ## Lab 02
 
 Number and name of feature: Feature #1, Display Images
@@ -36,7 +50,7 @@ Actual time needed to complete: 40min
 
 ################################################################
 
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
