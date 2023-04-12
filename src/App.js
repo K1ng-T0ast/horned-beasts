@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Header from './Components/Header';
 import Main from './Components/Main';
-import BeastData from './Components/SelectedBeast';
 import Footer from './Components/Footer';
 import ImageUrls from './data.json';
 
