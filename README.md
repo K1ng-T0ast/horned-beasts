@@ -2,13 +2,13 @@
 
 Number and name of feature: Feature #1, Display a Modal
 
-Estimate of time needed to complete: 30min
+Estimate of time needed to complete: 1hr 30min
 
 Start time: 2:40pm
 
-Finish time:
+Finish time: 3:55pm
 
-Actual time needed to complete:
+Actual time needed to complete: 1hr 20min
 
 ################################################################
 
