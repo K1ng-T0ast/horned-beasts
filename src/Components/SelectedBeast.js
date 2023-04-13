@@ -37,7 +37,7 @@ class BeastData extends React.Component {
                     <Card.Img variant="top" src={this.props.image_url} alt='random horned beast' className="cardImage" />
                     <Card.Body>
                         <Card.Title>
-                            <FaHeart /> {this.state.favorites} Favorites
+                            <FaHeart /> {this.state.favorites} Likes
                         </Card.Title>
                     </Card.Body>
                     <Card.Footer>

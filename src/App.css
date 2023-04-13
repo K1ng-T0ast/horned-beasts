@@ -18,13 +18,21 @@
 .inputContainer {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-bottom: 1em;
 }
 
+.hornFilter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5em;
+  margin-left: .75em;
+}
+
 .inputBox {
-  display: block;
+  display: flex;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: .75em;
   margin-bottom: 1em;
   padding: 10px;
   font-size: 18px;

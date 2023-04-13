@@ -1,4 +1,18 @@
-# Lab 03
+# Lab 04
+
+Number and name of feature: Feature #1, Filter Number of Horns
+
+Estimate of time needed to complete: 1hr 30min
+
+Start time: 3pm
+
+Finish time: 4:28pm
+
+Actual time needed to complete: 1hr 28min
+
+################################################################
+
+## Lab 03
 
 Number and name of feature: Feature #1, Display a Modal
 

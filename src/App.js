@@ -10,8 +10,8 @@ import ImageUrls from './data.json';
 function App() {
   return (
     <Container>
-      <Header title={<><span>Horned Beasts 3: </span><span style={{ fontStyle: 'italic', fontWeight: 'bolder' }}>Pointed Agendas</span></>} />
-      <Main heading='click on your favorite horned beasts' ImageUrls={ImageUrls} />
+      <Header title={<><span>Horned Beasts 4: </span><span style={{ fontStyle: 'italic', fontWeight: 'bolder' }}>Drill Down</span></>} />
+      <Main heading='Click to Favorite or Search Below' ImageUrls={ImageUrls} />
       <Footer farewell='Which one was your favorite?' />
     </Container>
   );
